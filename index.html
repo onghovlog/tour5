@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour Du Lịch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -56,6 +60,17 @@
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
+        position: relative;
+      }
+
+      .new {
+        position: absolute;
+        right: 0px;
+        background-color: #ff0000e4;
+        color: white;
+        padding: 5px 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
       }
 
       .tour img {
@@ -126,6 +141,7 @@
         <div class="tour-container" id="domesticToursContainer">
           <!-- Static content for domestic tours -->
           <div class="tour">
+            <div class="new"><i class="fa fa-fire"></i> New</div>
             <a href="detail.html">
               <img src="img/halong.jpg" alt="Tour Hạ Long" />
             </a>
@@ -138,6 +154,7 @@
             <p>Vẽ đẹp hoang sơ và yên bình chỉ có tại Phú Yên.</p>
           </div>
           <div class="tour">
+            <div class="new"><i class="fa fa-fire"></i> New</div>
             <img src="img/phuquoc.jpg" alt="Tour Phú Quốc" />
             <h3>Phú Quốc không nỡ vội xa</h3>
             <p>
@@ -157,11 +174,13 @@
         <div class="tour-container" id="internationalToursContainer">
           <!-- Static content for international tours -->
           <div class="tour">
+            <div class="new"><i class="fa fa-fire"></i> New</div>
             <img src="img/paris.jpg" alt="Paris" />
             <h3>Tour Paris</h3>
             <p>Thưởng thức nền văn hóa lâu dài và đẹp nhất thế giới.</p>
           </div>
           <div class="tour">
+            <div class="new"><i class="fa fa-fire"></i> New</div>
             <img src="img/hanquoc.jpg" alt="Hàn Quốc" />
             <h3>Hàn Quốc thu hút giới trẻ</h3>
             <p>Vẻ đẹp nền nã và quyến rũ đã từ lâu thu hút giới trẻ. .</p>
