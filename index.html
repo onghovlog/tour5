@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Du Lịch</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        color: #fff;
+        text-align: center;
+      }
+
+      header img {
+        width: 100%;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 24pt;
+        color: rgb(24, 119, 156);
+        border-bottom: 1px #316b7d dotted;
+      }
+
+      .container {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      main {
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+
+      .tour-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .tour {
+        width: 48%;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+
+      .tour img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      /* .tour .content {
+        margin: 0px 20px;
+      } */
+
+      .tour h3 {
+        margin: 5px 0px;
+        padding: 0px 20px;
+        font-size: 16pt;
+      }
+
+      .tour p {
+        margin: 10px 0px;
+        padding: 0px 20px;
+      }
+
+      .slider-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+      }
+
+      .slider-nav button {
+        background-color: #316b7d;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      footer {
+        background-color: #316b7d;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="img/banner.jpg" alt="" />
+    </header>
+    <div class="container">
+      <main>
+        <h2>Tour Mới</h2>
+        <div class="slider">
+          <div class="tour-container" id="newToursContainer">
+            <!-- JavaScript will populate this -->
+          </div>
+          <div class="slider-nav">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+          </div>
+        </div>
+
+        <h2>Tour Trong Nước</h2>
+        <div class="tour-container" id="domesticToursContainer">
+          <!-- Static content for domestic tours -->
+          <div class="tour">
+            <a href="detail.html">
+              <img src="img/halong.jpg" alt="Tour Hạ Long" />
+            </a>
+            <h3>Hạ Long Bay</h3>
+            <p>Khám phá vẻ đẹp hùng vĩ của Vịnh Hạ Long.</p>
+          </div>
+          <div class="tour">
+            <img src="img/phuyen.jpg" alt="Phú Yên" />
+            <h3>Phú Yên yên bình</h3>
+            <p>Vẽ đẹp hoang sơ và yên bình chỉ có tại Phú Yên.</p>
+          </div>
+          <div class="tour">
+            <img src="img/phuquoc.jpg" alt="Tour Phú Quốc" />
+            <h3>Phú Quốc không nỡ vội xa</h3>
+            <p>
+              Phúc Quốc ngày càng quyến rũ lữ khách phương xa với vẽ trinh
+              nguyên vốn có
+            </p>
+          </div>
+          <div class="tour">
+            <img src="img/nhatrang.jpg" alt="Tour Nha Trang" />
+            <h3>Nha Trang mùa thu về</h3>
+            <p>Nhớ Nha Trang đêm hè lộng gió, mặt nước xanh rờn ...</p>
+          </div>
+          <!-- Add more domestic tours as needed -->
+        </div>
+
+        <h2>Tour Nước Ngoài</h2>
+        <div class="tour-container" id="internationalToursContainer">
+          <!-- Static content for international tours -->
+          <div class="tour">
+            <img src="img/paris.jpg" alt="Paris" />
+            <h3>Tour Paris</h3>
+            <p>Thưởng thức nền văn hóa lâu dài và đẹp nhất thế giới.</p>
+          </div>
+          <div class="tour">
+            <img src="img/hanquoc.jpg" alt="Hàn Quốc" />
+            <h3>Hàn Quốc thu hút giới trẻ</h3>
+            <p>Vẻ đẹp nền nã và quyến rũ đã từ lâu thu hút giới trẻ. .</p>
+          </div>
+          <div class="tour">
+            <img src="img/thailan.jpg" alt="Thái Lan" />
+            <h3>Văn hóa phật giáo lâu đời</h3>
+            <p>Nơi con người tìm về với thiền hay sự ồn ào của đa sắc giới.</p>
+          </div>
+          <div class="tour">
+            <img src="img/LuanDon.jpg" alt="Luân Dôn" />
+            <h3>Uy nga tráng lệ - Luân Đôn nước Anh</h3>
+            <p>Anh Quốc là quốc gia trí tuệ và học thức.</p>
+          </div>
+          <!-- Add more international tours as needed -->
+        </div>
+      </main>
+    </div>
+    <footer>&copy; 2023 BHZ Travel</footer>
+
+    <script>
+      const newTours = [
+        {
+          img: "img/halong.jpg",
+          name: "Tour Hạ Long Bay",
+          description: "Khám phá vẻ đẹp hùng vĩ của Vịnh Hạ Long.",
+        },
+        {
+          img: "img/phuquoc.jpg",
+          name: "Tour Phú Quốc",
+          description:
+            "Phú Quốc - Thiên nhiên kỳ vĩ thu hút bước chân du khách",
+        },
+        {
+          img: "img/dalat.jpg",
+          name: "Đà Lạt mộng mơ",
+          description: "Tình yêu lên ngôi nơi miền đất lạnh.",
+        },
+        {
+          img: "img/phuyen.jpg",
+          name: "Phú Yên yên bình",
+          description: "Tìm về nơi nguyên sơ chỉ có tại Phú Yên",
+        },
+        {
+          img: "img/danang.jpg",
+          name: "Đà Nẵng kêu kì",
+          description: "Một thành phố đáng sống Đà Nẵng",
+        },
+        {
+          img: "img/nhatrang.jpg",
+          name: "Nhớ Nha Trang đêm hè lộng gió",
+          description: "Gửi về em từ thành phố biển ... ",
+        },
+        // Add more new tours as needed
+      ];
+
+      const toursContainer = document.getElementById("newToursContainer");
+      const tours = newTours;
+
+      let currentIndex = 0;
+      let slideInterval;
+
+      function showTours(startIndex) {
+        toursContainer.innerHTML = "";
+        for (let i = startIndex; i < startIndex + 2; i++) {
+          if (tours[i]) {
+            const tour = tours[i];
+            const tourHtml = `
+                        <div class="tour">
+                            <img src="${tour.img}" alt="${tour.name}">
+                            <h3>${tour.name}</h3>
+                            <p>${tour.description}</p>
+                        </div>
+                    `;
+            toursContainer.innerHTML += tourHtml;
+          }
+        }
+      }
+
+      function prevSlide() {
+        clearInterval(slideInterval);
+        currentIndex -= 2;
+        if (currentIndex < 0) {
+          currentIndex = tours.length - 2;
+        }
+        showTours(currentIndex);
+        startAutoSlide();
+      }
+
+      function nextSlide() {
+        clearInterval(slideInterval);
+        currentIndex += 2;
+        if (currentIndex >= tours.length) {
+          currentIndex = 0;
+        }
+        showTours(currentIndex);
+        startAutoSlide();
+      }
+
+      function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 3000); // 5000 milliseconds = 5 seconds
+      }
+
+      // Initial load
+      showTours(currentIndex);
+      startAutoSlide();
+    </script>
+  </body>
+</html>

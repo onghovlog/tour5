@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Tour</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      p {
+        line-height: 150%;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      header img {
+        width: 100%;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .tour-right {
+        width: 75%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .tour-detail {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 20px;
+      }
+
+      .tour-detail img {
+        width: 60%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .tour-info {
+        width: 35%;
+      }
+
+      .tour-info h2 {
+        font-size: 24pt;
+        color: rgb(24, 119, 156);
+        border-bottom: 1px #316b7d dotted;
+      }
+
+      .tour-info p {
+        margin: 10px 0;
+      }
+
+      .tour-list {
+        width: 25%;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .tour-list h2 {
+        font-size: 20pt;
+        color: rgb(24, 119, 156);
+        border-bottom: 1px #316b7d dotted;
+      }
+
+      .tour-categories {
+        list-style: none;
+        padding: 0;
+      }
+
+      .tour-categories li {
+        margin: 10px 0;
+      }
+
+      .tour-categories a {
+        text-decoration: none;
+        color: rgb(24, 119, 156);
+        font-weight: bold;
+      }
+
+      .path {
+        text-align: left;
+      }
+
+      .path a {
+        font-size: 14pt;
+        color: rgb(24, 119, 156);
+        text-decoration: none;
+      }
+
+      footer {
+        background-color: #316b7d;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="img/banner-du-lich-he.jpg" alt="" />
+    </header>
+    <div class="container">
+      <div class="tour-list">
+        <h2>Danh Mục Tour</h2>
+        <ul class="tour-categories">
+          <li><a href="#">Tour trong nước</a></li>
+          <li><a href="#">Tour nước ngoài</a></li>
+          <li><a href="#">Du Lịch Biển</a></li>
+          <li><a href="#">Thành Phố Hấp Dẫn</a></li>
+          <li><a href="#">Thiên Nhiên Hoang Sơ</a></li>
+          <!-- Thêm danh mục tour khác nếu cần -->
+        </ul>
+      </div>
+      <div class="tour-right">
+        <div class="tour-detail">
+          <div class="path">
+            <a href="index.html">Trang chủ</a> | <a href="#">Tour trong nước</a>
+          </div>
+        </div>
+        <div class="tour-detail">
+          <img src="img/halong.jpg" alt="Tour Detail" />
+          <div class="tour-info">
+            <h2>Tour Hạ Long Bay</h2>
+            <p>Khám phá vẻ đẹp hùng vĩ của Vịnh Hạ Long.</p>
+            <p><strong>Địa điểm:</strong> Hạ Long, Việt Nam</p>
+            <p><strong>Thời gian:</strong> 3 ngày 2 đêm</p>
+            <p><strong>Giá:</strong> $500</p>
+            <p>
+              <strong>Danh mục:</strong>
+              <a href="#">Tour trong nước</a>
+            </p>
+          </div>
+        </div>
+        <div class="tour-detail">
+          <!-- Nội dung chi tiết tour -->
+          <p>
+            Hạ Long Bay là một trong những điểm đến nổi tiếng nhất ở Việt Nam
+            với những danh thắng tự nhiên tuyệt vời. Đến với Hạ Long, du khách
+            sẽ được tham quan những hòn đảo đá vôi nổi tiếng, tham gia các hoạt
+            động giải trí trên biển và thưởng thức ẩm thực đặc sản vùng miền.
+          </p>
+          <!-- Thêm nội dung chi tiết tour khác nếu cần -->
+        </div>
+      </div>
+    </div>
+    <footer>&copy; 2023 BHZ Travel</footer>
+  </body>
+</html>
